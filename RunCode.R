@@ -9,6 +9,10 @@ level(logger) <- "INFO"
 info(logger, "LOG CREATED")
 
 snapshot <- OmopSketch::summariseOmopSnapshot(cdm)
+omopgenerics::exportSummarisedResult(snapshot,
+                                     minCellCount = 10,
+                                     fileName = "snapshot_{dbName}",
+                                     path = here("Results", dbName))
 
 ### Create Cohort
 
