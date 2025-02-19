@@ -49,7 +49,3 @@ incidence <- IncidencePrevalence::estimateIncidence(
 p1 <- CohortCharacteristics::plotCharacteristics(characteristics)
 p2 <- CohortCharacteristics::plotLargeScaleCharacteristics(lsc)
 p3 <- IncidencePrevalence::plotIncidence(incidence)
-
-ggplot2::ggsave(paste0("Results/", dbName, "/characteristics.png"), plot = p1, width = 6, height = 4, dpi = 300)
-ggplot2::ggsave(paste0("Results/", dbName, "/lsc.png"), plot = p2, width = 6, height = 4, dpi = 300)
-ggplot2::ggsave(paste0("Results/", dbName, "/incidence.png"), plot = p3, width = 6, height = 4, dpi = 300)
